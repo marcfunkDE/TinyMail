@@ -1,0 +1,20 @@
+RewriteEngine On
+
+RewriteBase /
+
+RewriteRule ^(mailing)/([0-9]+)/(details)\.html$ index.php?s=$1&a=s&id=$2 [L]
+RewriteRule ^(mailing)/([0-9]+)/(da)/(edit)\.html$ index.php?s=$1&a=e&id=$2&da [L]
+RewriteRule ^(mailing)/([0-9]+)/(edit)\.html$ index.php?s=$1&a=e&id=$2 [L]
+RewriteRule ^(mailing)/([0-9]+)/(dm)/(del)\.html$ index.php?s=$1&a=d&id=$2&dm [L]
+RewriteRule ^(mailing)/([0-9]+)/(del)\.html$ index.php?s=$1&a=d&id=$2 [L]
+RewriteRule ^(mailing)/(hinzufuegen)\.html$ index.php?s=$1&a=a [L]
+
+RewriteRule ^(receiver)/([0-9]+)/(edit)\.html$ index.php?s=$1&a=e&id=$2 [L]
+RewriteRule ^(receiver)/([0-9]+)/(dr)/(del)\.html$ index.php?s=$1&a=d&id=$2&dr [L]
+RewriteRule ^(receiver)/([0-9]+)/(del)\.html$ index.php?s=$1&a=d&id=$2 [L]
+RewriteRule ^(receiver)/(import)\.html$ index.php?s=$1&a=a [L]
+
+RewriteRule ^index.html$ index.php?s=index [L]
+RewriteRule ^mailing.html$ index.php?s=mailing [L]
+RewriteRule ^receiver.html$ index.php?s=receiver [L]
+RewriteRule ^sendmail.html$ index.php?s=sendmail [L]

@@ -1,0 +1,30 @@
+<h1>Empfänger/in bearbeiten</h1>
+
+<form action="<?= $sic ?>/<?= $id ?>/edit.html" method="post" name="edit">
+	<div class="formbody">
+		
+		<?= $errmsg ?>
+		
+		<div class="widget-text">
+			<label for="mail">E-Mail</label>
+			<input type="text" name="mail" id="mail" value="<?= $pmail ?>" required autofocus>
+		</div>
+		<div class="widget-text">
+			<label for="salutation">Anrede</label>
+			<input type="text" name="salutation" id="salutation" value="<?= $psalutation ?>">
+		</div>
+		<div class="widget-text">
+			<label for="lastname">Vorname</label>
+			<input type="text" name="firstname" id="firstname" value="<?= $pfirstname ?>">
+		</div>
+		<div class="widget-text">
+			<label for="lastname">Nachname</label>
+			<input type="text" name="lastname" id="lastname" value="<?= $plastname ?>">
+		</div>
+	</div>
+	<div class="widget-submit">
+		<button type="submit" name="submit">Empfänger/in speichern</button>
+		<input type="hidden" name="save<?= $sic ?>" value="yes">
+		<input type="hidden" name="<?= $sic ?>id" value="<?= $id ?>">
+	</div>
+</form>

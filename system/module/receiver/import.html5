@@ -1,0 +1,23 @@
+<h1>Empfänger importieren</h1>
+<p>Importieren Sie Ihre Empfänger mittels .csv Datei. Felder müssen durch ; (Semikolon) getrennt sein, Zeilen durch einen Zeilenumbruch. Es darf keine Titelzeile enthalten sein! Wenn das Feld Anrede leer ist, werden bei Nutzung der Variable $ANREDE diese Empfänger beim Versand übersprungen. Folgende Spalten müssen vorhanden sein:</p>
+	<div class="flex">
+		<ul class="full">
+			<li>E-Mail</li>
+			<li>Anrede</li>
+			<li>Vorname</li>
+			<li>Nachname</li>
+		</ul>
+	</div>
+
+<?= $errmsg ?>
+
+<form action="<?= $sic ?>/import.html" enctype="multipart/form-data" method="post" name="import">
+	<div class="formbody">
+		<label for="file">Empfängerliste (.csv)</label>
+		<input type="file" name="file" id="file" required>
+	</div>
+	<div class="widget-submit">
+		<button type="submit" name="submit">Datei importieren</button>
+		<input type="hidden" name="savereceiver" value="yes">
+	</div>
+</form>

@@ -1,0 +1,31 @@
+<?php if($lc == 1) : ?>
+	
+	<h1>Empfänger <a href="receiver/import.html" title="Empfänger importieren"><img src="img/system/add.svg" alt="Plus" title="Empfänger importieren"></a></h1>
+	
+	<div class="table">
+		<div class="header">
+			<div class="row">
+				<div class="cell">Mail</div>
+				<div class="cell">Vorname</div>
+				<div class="cell">Nachname</div>
+				<div class="cell">&nbsp;</div>
+			</div>
+		</div>
+	
+<?php endif; ?>
+
+		<div class="row">
+			<div class="cell"><?= $mail ?></div>
+			<div class="cell"><?= $firstname ?></div>
+			<div class="cell"><?= $lastname ?></div>
+			<div class="cell c">
+				<a href="receiver/<?= $id ?>/edit.html" title="Empfänger bearbeiten"><img src="img/system/edit.svg" alt="Stift" title="Empfänger bearbeiten"></a>
+				<a href="receiver/<?= $id ?>/del.html" title="Empfänger löschen"><img src="img/system/del.svg" alt="Stop" title="Empfänger löschen"></a>
+			</div>
+		</div>
+
+<?php if($lc == $tl) : ?>
+	
+	</div>
+	
+<?php endif; ?>

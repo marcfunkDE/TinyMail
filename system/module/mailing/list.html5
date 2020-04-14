@@ -1,0 +1,32 @@
+<?php if($lc == 1) : ?>
+	
+	<h1>Serienmails <a href="mailing/hinzufuegen.html" title="Serienmail hinzufügen"><img src="img/system/add.svg" alt="Plus" title="Serienmail hinzufügen"></a></h1>
+	<p>Hier finden Sie alle bereits erstellen Serienbriefe. Um eine Serienmail anzusehen, klicken Sie einfach auf den Betreff.</p>
+	
+	<div class="table">
+		<div class="header">
+			<div class="row">
+				<div class="cell">Datum</div>
+				<div class="cell">Betreff</div>
+				<div class="cell">Sendedatum</div>
+				<div class="cell">&nbsp;</div>
+			</div>
+		</div>
+	
+<?php endif; ?>
+
+		<div class="row">
+			<div class="cell"><?= $datetime ?></div>
+			<div class="cell"><a href="mailing/<?= $id ?>/details.html" title="Serienmail aufrufen"><?= $subject ?></a></div>
+			<div class="cell"><?= $senddatetime ?></div>
+			<div class="cell c">
+				<a href="mailing/<?= $id ?>/edit.html" title="Serienmail bearbeiten"><img src="img/system/edit.svg" alt="Stift" title="Serienmail bearbeiten"></a>
+				<a href="mailing/<?= $id ?>/del.html" title="Serienmail löschen"><img src="img/system/del.svg" alt="Stop" title="Serienmail löschen"></a>
+			</div>
+		</div>
+
+<?php if($lc == $tl) : ?>
+	
+	</div>
+	
+<?php endif; ?>

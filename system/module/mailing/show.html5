@@ -1,0 +1,28 @@
+<h1>Serienbrief Details</h1>
+
+<div class="flex">
+	<div class="cbox">
+		<b>Datum:</b><br>
+		<?= $datetime ?>
+	</div>
+	<div class="cbox">
+		<b>Gesendet:</b><br>
+		<?= $senddatetime ?>
+	</div>
+	<div class="cbox">
+		<b>Betreff:</b><br>
+		<?= $subject ?>
+	</div>
+	<div class="full">
+		<b>Inhalt:</b><br>
+		<div class="content">
+			<?= $content ?>
+		</div>
+	</div>
+	<?php if($attachment !== "") : ?>
+		<div class="cbox">
+			<b>Anhang:</b><br>
+			<a href="files/<?= $attachment ?>" target="_blank"><?= $attachment ?></a>
+		</div>
+	<?php endif; ?>
+</div>

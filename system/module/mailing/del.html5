@@ -1,0 +1,8 @@
+<h1>Serienmail löschen</h1>
+<form action="<?= $sic ?>/<?= $id ?>/dm/del.html" method="post" name="del">
+	<p class="w">Wollen Sie den Serienmail &quot;<?= $delname ?>&quot; wirklich löschen?</p>
+	<button type="submit" name="submit">Bestätigen</button>
+	<input type="hidden" name="attach" value="<?= $attachment ?>">
+	<input type="hidden" name="<?= $sic ?>id" value="<?= $id ?>">
+	<input type="hidden" name="del<?= $sic ?>" value="yes">
+</form>

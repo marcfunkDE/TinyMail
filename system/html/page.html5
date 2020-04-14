@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<base href="/">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<?= $addcss ?>
+		
+		<link rel="stylesheet" href="css/trumbowyg.min.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="expires" content="0">
+		<meta name="format-detection" content="telephone=yes">
+		<meta name="robots" content="index,follow">
+		<meta name="generator" content="marcfunk">
+		<title>Tiny Mail v0.1</title>
+	</head>
+	<body itemscope itemtype="http://schema.org/WebPage">
+		<div id="wrapper">
+			
+			<header id="header">
+				<div class="logo">
+					<a href="index.html" itemprop="url"><img src="img/system/logo.svg" alt="Logo" title="TinyMail" itemprop="image"></a>
+				</div>
+				<div class="nav">
+					<div class="btn">
+						<a href="mailing.html" title="Mailing"><img src="img/system/nav_mailing.svg" alt="Newsletter" title="Mailing"></a>
+					</div>
+					<div class="btn">
+						<a href="receiver.html" title="Empfänger"><img src="img/system/nav_receiver.svg" alt="Kontakte" title="Empfänger"></a>
+					</div>
+					<div class="btn">
+						<a href="sendmail.html" title="Mail versenden"><img src="img/system/nav_sendmail.svg" alt="Mail versenden" title="Sendevorgang starten"></a>
+					</div>
+				</div>
+			</header>
+				
+			<div id="container">
+				<main id="main">
+					<div class="inside">
+						<?= $sitecontent ?>
+					</div>
+				</main>
+			</div>
+			
+			<div id="footer">
+				<div class="inside">
+					TinyMail v0.1 | &copy <a href="https://marc-funk.de" title="marcfunk, it-management und e-commerce service" target="_blank">marcfunk</a>
+				</div>
+			</div>
+			
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+		<script src="js/trumbowyg.min.js"></script>
+		<script type="text/javascript" src="js/trumbowyg.de.min.js"></script>
+		<script type="text/javascript">
+			$('#editor').trumbowyg({
+				lang: 'de',
+				removeformatPasted: true,
+				resetCss: true,
+				autogrow: true,
+				btns: [
+					['viewHTML'],
+					['undo', 'redo'],
+					['formatting'],
+					['strong', 'em', 'del'],
+					['link'],
+					['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull']
+				],
+				minimalLinks: true
+			});
+		</script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+<h1>Empfänger/in löschen</h1>
+<form action="<?= $sic ?>/<?= $id ?>/dr/del.html" method="post" name="del">
+	<p class="w">Wollen Sie die/den Empfänger/in &quot;<?= $delname ?>&quot; wirklich löschen?</p>
+	<button type="submit" name="submit">Bestätigen</button>
+	<input type="hidden" name="<?= $sic ?>id" value="<?= $id ?>">
+	<input type="hidden" name="del<?= $sic ?>" value="yes">
+</form>

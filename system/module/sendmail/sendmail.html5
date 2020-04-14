@@ -1,0 +1,56 @@
+<h1>Sendevorgang starten</h1>
+<p>Starten Sie den Sendevorgang eines Serienbriefes an die importierten Empfänger/innen. Sie können sich außerdem vorab eine Testmail senden lassen. Vor dem Sendevorgang an alle Empfänger/innen erfolgt nochmals eine Rückfrage!</p>
+<p>Sobald Sie den Schalter für die Testsendung aktivieren, ist der Sendevorgang blockiert.</p> 
+
+<?= $errmsg ?>
+
+<form action="<?= $sic ?>.html" method="post" name="send">
+	<h2>Serienmail</h2>
+	<div class="formbody mb">
+		<div class="widget-full">
+			<select name="mailing" required>
+				<?= $option ?>
+			</select>
+		</div>
+	</div>
+	
+	<h2>Testsendung</h2>
+	<div class="formbody">
+		<div class="widget-full">
+			<label>Testsendung durchführen?</label>
+			<p>Aktivieren Sie den Schalter, um vorab eine Testsendung an die nachfolgende E-Mailadresse zu erzeugen.</p>
+			<input type="checkbox" onChange="javascript: changebox();" name="testsend" id="testsend" value="yes">
+			<label for="testsend"></label>
+		</div>
+		<div class="widget-text">
+			<label for="mail">E-Mail</label>
+			<input type="text" name="mail" id="mail" autofocus>
+		</div>
+		<div class="widget-text">
+			<label for="salutation">Anrede</label>
+			<input type="text" name="salutation" id="salutation">
+		</div>
+		<div class="widget-text">
+			<label for="lastname">Vorname</label>
+			<input type="text" name="firstname" id="firstname">
+		</div>
+		<div class="widget-text">
+			<label for="lastname">Nachname</label>
+			<input type="text" name="lastname" id="lastname">
+		</div>
+	</div>
+	
+	<h2>Sendevorgang</h2>
+	<div class="formbody">
+		<div class="widget-text">
+			<label>Sendevorgang starten?</label>
+			<p>Aktivieren Sie den Schalter, um den Sendevorgang zu starten!</p>
+			<input type="checkbox" name="startsend" id="startsend" value="yes">
+			<label for="startsend"></label>
+		</div>
+	</div>
+	<div class="widget-submit">
+		<button type="submit" name="submit">E-Mails generieren</button>
+		<input type="hidden" name="go" value="yes">
+	</div>
+</form>

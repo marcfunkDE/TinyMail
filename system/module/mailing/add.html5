@@ -1,0 +1,36 @@
+<h1>Serienmail hinzufügen</h1>
+<p>Geben Sie einen Betreff sowie eine Nachricht ein. Oberhalb des Textfeldes, finden Sie Platzhalter, die Sie im Text verwenden können. Optional können Sie einen Anhang hochladen.</p>
+
+<form action="<?= $sic ?>/hinzufuegen.html" enctype="multipart/form-data" method="post" name="add">
+	<div class="formbody">
+		
+		<?= $errmsg ?>
+		
+		<div class="widget-text">
+			<label for="subject">Betreff</label>
+			<input type="text" name="subject" id="subject" value="<?= $psubject ?>" required autofocus>
+		</div>
+		<div class="widget-text">
+			<label for="attach">Anhang (.pdf / .jpg)</label>
+			<input type="file" name="file" id="attach">
+		</div>
+		<div class="widget-full">
+			<label for="message">E-Mail Nachricht</label>
+			<p>Hier können Sie die E-Mail Nachricht gestalten und Variablen nutzen, die beim Versand automatisch ersetzt werden:</p>
+			<ul class="flex">
+				<li>Für einen Absatz drücken Sie Enter.</li>
+				<li>Für einen Zeilenumbruch halten Sie STRG gedrückt und wählen dann Enter.</li>
+				<li>Für Titel wählen Sie den Button mit dem kleinen q.</li>
+				<li>$SAL wird ersetzt durch "Sehr geehrte" oder "Sehr geehrter" (entsprechend der Anrede).</li>
+				<li>Für die Anrede geben Sie $ANREDE ein.</li>
+				<li>$VORNAME ersetzt die Variable mit dem Vornamen.</li>
+				<li>$NACHNAME ersetzt die Variable mit dem Nachnamen.</li>
+			</ul>
+			<div id="editor"><?= $peditor ?></div>
+		</div>
+	</div>
+	<div class="widget-submit">
+		<button type="submit" name="submit">Serienmail speichern</button>
+		<input type="hidden" name="savemailing" value="yes">
+	</div>
+</form>

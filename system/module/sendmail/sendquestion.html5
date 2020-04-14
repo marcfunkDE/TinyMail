@@ -1,0 +1,7 @@
+<h1>Sendevorgang starten</h1>
+<p class="w">Wollen Sie den Sendevorgang an <?= $tr[0] ?> Empfänger/innen wirklich starten?</p>
+<form action="<?= $sic ?>.html" method="post" name="startsend">
+	<button type="submit" name="submit">Versendung starten</button>
+	<input type="hidden" name="completesend" value="yes">
+	<input type="hidden" name="mailingid" value="<?= $mailingid ?>">
+</form>

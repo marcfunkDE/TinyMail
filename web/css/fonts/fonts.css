@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'Schrift';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../files/fonts/regular.eot');
+	src: url('../../files/fonts/regular.eot?#iefix') format('embedded-opentype'),
+		url('../../files/fonts/regular.woff2') format('woff2'),
+		url('../../files/fonts/regular.woff') format('woff'),
+		url('../../files/fonts/regular.ttf') format('truetype'),
+		url('../../files/fonts/regular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+	font-family: 'Schrift';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../../files/fonts/bold.eot');
+	src: url('../../files/fonts/bold.eot?#iefix') format('embedded-opentype'),
+		url('../../files/fonts/bold.woff2') format('woff2'),
+		url('../../files/fonts/bold.woff') format('woff'),
+		url('../../files/fonts/bold.ttf') format('truetype'),
+		url('../../files/fonts/bold.svg#svgFontName') format('svg');
+}
+
+body {
+	font:100.01% 'Schrift';
+}
